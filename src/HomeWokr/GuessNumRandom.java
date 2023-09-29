@@ -16,10 +16,10 @@ public class GuessNumRandom {
                     System.out.println("Залишилась остання спроба!");
                 } else if (i == 3) {
                     System.out.println("Спроби закінчено, спробуйте зпочатку!");
-                    System.exit(0);
+                    break;
                 }
-
             }
+
         }
 
 

@@ -114,15 +114,17 @@ public class ConterStr2 {
         System.out.println();
 
 
+        System.out.println("Середнье арифметичне команди " + teamName1 + " " + (fragsTeam1 / 5) + " балів");
+        System.out.println("Середнье арифметичне команди " + teamName2 + " " + (fragsTeam2 / 5) + " балів");
+        System.out.println();
+
         if (fragsTeam1 > fragsTeam2) {
             System.out.println("Виграла команда " + teamName1 + " " + fragsTeam1 + " фрагів");
         } else if (fragsTeam1 < fragsTeam2) {
-            System.out.println("Виграла команда " + teamName2 + " " + fragsTeam1 + " фрагів");
+            System.out.println("Виграла команда " + teamName2 + " " + fragsTeam2 + " фрагів");
         } else if (fragsTeam1 == fragsTeam2) {
             System.out.println("НІЧИЯ!!!");
 
         }
-
-
     }
 }
