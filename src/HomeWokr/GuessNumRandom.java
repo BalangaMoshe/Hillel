@@ -25,7 +25,11 @@ public class GuessNumRandom {
 
         int random = (int) (Math.random() * 11);
 
-        for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 5; j++) {
+            if (!scanner.hasNextInt()) {
+                System.out.println("Введіть число!");
+                scanner.nextLine();continue;
+            }
 
             int numerUsers = scanner.nextInt();
 
