@@ -17,17 +17,22 @@ public class LotoSabawa {
         Scanner scanner = new Scanner(System.in);
 
         for (int i = 0; i < numerUser.length; i++) {
-            if (!scanner.hasNextInt()) {
-                System.out.println("Ви ввели символ, а треба число!");
-                break;
-            }
-            int userInput = scanner.nextInt();
+            while (true) {
+                System.out.println("Введіть число " + (i + 1) + ", ");
+                if (!scanner.hasNextInt()) {
+                    System.out.println("Ви ввели символ, а треба число!");
+                    scanner.next();
+                } else {
+                    int userInput = scanner.nextInt();
 
-            if (userInput > max) {
-                System.out.println("Число більше 9!");
-                break;
+                    if (userInput > max || userInput < min) {
+                        System.out.println("Число треба шоб було від 0 до 9");
+                    } else {
+                        numerUser[i] = userInput;
+                        break;
+                    }
+                }
             }
-            numerUser[i] = userInput;
         }
         System.out.println(Arrays.toString(numerUser) + " --- Числа, які ввів користувач!");
 
