@@ -92,8 +92,11 @@ public class Person {
                 System.out.print("Введіть номер телефону: ");
                 String telNumer = scanner.nextLine();
 
-                personInfo1(name, vorname, town, telNumer);
-                people[personCount] = "Ім'я: " + name + ", Фамілія: " + vorname + ", Місто: " + town + ", Телефон: " + telNumer;
+//                personInfo1(name, vorname, town, telNumer);
+//                people[personCount] = "Ім'я: " + name + ", Фамілія: " + vorname + ", Місто: " + town + ", Телефон: " + telNumer;
+//                personCount++;
+                String personInfo = personInfo1(name, vorname, town, telNumer);
+                people[personCount] = personInfo;
                 personCount++;
             }
 
@@ -118,9 +121,10 @@ public class Person {
     }
 
 
-    static void personInfo1(String name, String vorname, String town, String telNumber) {
-        System.out.println("----------------------------");
-        System.out.println("Зателефонувати громадянинові " + name + " " + vorname + " з міста " + town + " можна за номером " + telNumber);
+    static String personInfo1(String name, String vorname, String town, String telNumber) {
+        String info = ("-->  ");
+        info += ("Зателефонувати громадянинові " + name + " " + vorname + " з міста " + town + " можна за номером " + telNumber);
+        return info;
     }
 
 }
